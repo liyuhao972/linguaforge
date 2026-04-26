@@ -1,0 +1,101 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  darkMode: ["class"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        parchment: "#FAF8F5",
+        ink: "#1E1E24",
+        inkLight: "#4A4A55",
+        card: "#FFFFFF",
+        surface: "#F0EDE8",
+        border: "#E5E1DA",
+        muted: "#8A8A95",
+        amber: "#F2A93B",
+        sage: "#7CC67A",
+        coral: "#E05263",
+        deepBlue: "#2B4C7E",
+        lavender: "#B57AE6",
+        teal: "#2CB5A0",
+        // Grammar colors
+        noun: "#E05263",
+        verb: "#4F8EF7",
+        adjective: "#7CC67A",
+        adverb: "#B57AE6",
+        pronoun: "#F2A93B",
+        preposition: "#2CB5A0",
+        conjunction: "#A0AAB2",
+        interjection: "#E8804C",
+        article: "#6B7B8C",
+        // Tense colors
+        present: "#4F8EF7",
+        presentContinuous: "#2CB5A0",
+        past: "#E05263",
+        pastContinuous: "#E8804C",
+        presentPerfect: "#B57AE6",
+        future: "#F2A93B",
+        conditional: "#7CC67A",
+      },
+      fontFamily: {
+        display: ["Playfair Display", "serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+      },
+      borderRadius: {
+        sm: "6px",
+        md: "10px",
+        lg: "16px",
+        xl: "24px",
+        full: "9999px",
+      },
+      spacing: {
+        1: "4px",
+        2: "8px",
+        3: "12px",
+        4: "16px",
+        5: "24px",
+        6: "32px",
+        7: "48px",
+        8: "64px",
+        9: "96px",
+        10: "128px",
+      },
+      animation: {
+        "fade-up": "fadeUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+        "scale-in": "scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+        "slide-right": "slideRight 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+        "pulse-ring": "pulseRing 2s ease-in-out infinite",
+        "count-up": "countUp 0.8s ease-out forwards",
+        "float": "float 3s ease-in-out infinite",
+      },
+      keyframes: {
+        fadeUp: {
+          "0%": { opacity: "0", transform: "translateY(24px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        scaleIn: {
+          "0%": { opacity: "0", transform: "scale(0.95)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
+        slideRight: {
+          "0%": { opacity: "0", transform: "translateX(-20px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        pulseRing: {
+          "0%": { transform: "scale(1)", opacity: "1" },
+          "50%": { transform: "scale(1.1)", opacity: "0.7" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+      },
+    },
+  },
+  plugins: [],
+}

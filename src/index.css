@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-parchment: #FAF8F5;
+  --color-ink: #1E1E24;
+  --color-inkLight: #4A4A55;
+  --color-card: #FFFFFF;
+  --color-surface: #F0EDE8;
+  --color-border: #E5E1DA;
+  --color-muted: #8A8A95;
+  --color-amber: #F2A93B;
+  --color-sage: #7CC67A;
+  --color-coral: #E05263;
+  --color-deepBlue: #2B4C7E;
+  --color-lavender: #B57AE6;
+  --color-teal: #2CB5A0;
+  --color-noun: #E05263;
+  --color-verb: #4F8EF7;
+  --color-adjective: #7CC67A;
+  --color-adverb: #B57AE6;
+  --color-pronoun: #F2A93B;
+  --color-preposition: #2CB5A0;
+  --color-conjunction: #A0AAB2;
+  --color-interjection: #E8804C;
+  --color-article: #6B7B8C;
+  --color-present: #4F8EF7;
+  --color-presentContinuous: #2CB5A0;
+  --color-past: #E05263;
+  --color-pastContinuous: #E8804C;
+  --color-presentPerfect: #B57AE6;
+  --color-future: #F2A93B;
+  --color-conditional: #7CC67A;
+
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-parchment text-ink font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-md;
+  }
+}
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@600;700&display=swap');
